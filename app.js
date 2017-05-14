@@ -1,13 +1,15 @@
 var express = require("express");
 var app = express();
 
+app.set("view engine", "ejs");
+
 //////////////////////
 //ROUTES
 ///////////////////
 
 // Homepage 
 app.get("/", function(req, res){
-   res.send("Homepage"); 
+   res.render("index"); 
 });
 
 // Get time
